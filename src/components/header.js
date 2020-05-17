@@ -23,21 +23,21 @@ const Header = ({ siteTitle }) => (
   >
     <StyledNavigationList $align={ALIGN.left}>
       <StyledNavigationItem>
-        <Link href="/">{siteTitle}</Link>
-      </StyledNavigationItem>
-    </StyledNavigationList>
+        <Link href="/"> My clicks.. </Link>{' '}
+      </StyledNavigationItem>{' '}
+    </StyledNavigationList>{' '}
     <StyledNavigationList $align={ALIGN.right}>
       <StyledNavigationItem>
         <SocialLink href={config.socialLinks.instagram}>
-          Instagram
-        </SocialLink>
-      </StyledNavigationItem>
+          See more on my Instagram{' '}
+        </SocialLink>{' '}
+      </StyledNavigationItem>{' '}
       <StyledNavigationItem>
         <Link href={`mailto:${config.contact.email}`}>
-          <Button>Let's talk</Button>
-        </Link>
-      </StyledNavigationItem>
-    </StyledNavigationList>
+          <Button> Let 's talk</Button>{' '}
+        </Link>{' '}
+      </StyledNavigationItem>{' '}
+    </StyledNavigationList>{' '}
   </HeaderNavigation>
 );
 

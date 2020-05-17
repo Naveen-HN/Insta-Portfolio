@@ -19,7 +19,7 @@ const ImageGallery = () => {
     allInstaNode: { edges },
   } = useStaticQuery(graphql`
     {
-      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 12) {
+      allInstaNode(sort: { fields: timestamp, order: DESC }, limit: 20) {
         edges {
           node {
             id
@@ -51,8 +51,8 @@ const ImageGallery = () => {
               loading="lazy"
               alt={caption || ''}
               fluid={childImageSharp.fluid}
-            />
-          </a>
+            />{' '}
+          </a>{' '}
         </FlexGridItem>
       );
     });
@@ -70,7 +70,7 @@ const ImageGallery = () => {
       flexGridColumnGap={['scale0', 'scale200']}
       flexGridRowGap={['scale0', 'scale200']}
     >
-      {renderImages()}
+      {renderImages()}{' '}
     </FlexGrid>
   );
 };
